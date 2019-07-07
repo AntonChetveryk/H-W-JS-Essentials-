@@ -77,3 +77,53 @@ function minMax(arr) {
 	obj.max  = max;
 	return obj;
 }
+
+/*Task8*/
+
+function average(arr){
+	 let total = arr.reduce(function(sum, currentItem){
+		return sum + currentItem;
+	},0);
+	return (total/arr.length).toFixed(2);
+}
+
+/*Task9*/
+
+let matrix = [[2,2],[1,4],[5,6]];
+
+function concatFirstNestedArrays(arr){
+	function conc(previousValue, currentItem, index, arr){
+		return previousValue.concat(currentItem);
+	}
+	return arr.reduce(conc,[]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
