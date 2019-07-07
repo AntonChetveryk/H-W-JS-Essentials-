@@ -1,3 +1,6 @@
+				/// Use this array for tests
+const testArr =  [8, 2, 4, 4, 5, 6, 7, 8, 9];
+
 /*Task1*/
 
 function printTimeout(str, n) {
@@ -31,3 +34,46 @@ function bombTimer(str, time) {
 	return 'start timer';
 };
 //Строка срабатывает одновременно с последним значением?
+
+/*Task4*/
+
+function factorial(n) {
+	return (n > 1) ? n * factorial(n - 1) : 1;
+	//  без учета n = 0 || n = false
+}
+
+/*Task6*/
+
+function filterNumbers(arr, maxNumber) {
+	const newArr = [];
+
+	function filter(item, i, arr) {
+		if (item < maxNumber) {
+			newArr.push(item)
+		}
+	}
+	arr.map(filter);
+	return newArr;
+}
+
+/*Task7*/
+
+function minMax(arr) {
+	const obj = {};
+	if(typeof arr !== 'object'){
+		return 'input Array to minMax()';
+	}
+	let min = arr[0],
+		max = arr[0];
+	for(let i=0; i<arr.length; i++){
+		if(arr[i] > max){
+			max = arr[i];
+		}
+		if(arr[i] < min){
+			min = arr[i];
+		}
+	}
+	obj.min = min;
+	obj.max  = max;
+	return obj;
+}
