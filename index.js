@@ -4,7 +4,7 @@ const testArr =  [8, 2, 4, 4, 5, 6, 7, 8, 9];
 /*Task1*/
 
 function printTimeout(str, n) {
-	setTimeout(() => console.log(str), n);
+	setTimeout(() => console.log(str), n*1000);
 }
 
 /*Task2*/
